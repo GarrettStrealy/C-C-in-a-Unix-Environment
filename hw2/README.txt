@@ -1,3 +1,5 @@
+This project demonstrates my ability to use TCLAP and maps
+
 Description
  *   Opens an input file for reading and output file for writing.
  *   Copies all data from the input file to the output file while -
