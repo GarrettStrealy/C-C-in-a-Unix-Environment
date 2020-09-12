@@ -82,9 +82,7 @@ int main(int argc, char *argv[])
         output += c;
       }
 
-      inputFile.close();
       outputFile << output << endl;
-      return 0;
     }
 
     // -l command given
@@ -95,11 +93,9 @@ int main(int argc, char *argv[])
         {
           inputArr.push_back(c);
         }
-
-	inputFile.close();
+	
 	output = toLowercase(inputArr);
 	outputFile << output << endl;
-	return 0;
     }
 
     // -u command given
@@ -110,12 +106,14 @@ int main(int argc, char *argv[])
       {
         inputArr.push_back(c);
       }
-      inputFile.close();
       output = toUppercase(inputArr);
       outputFile << output << endl;
-      return 0;
-    }
-
+    }	
+	  
   } catch (TCLAP::ArgException &e)  // catch any exceptions
     { cerr << "error: " << e.error() << " for arg " << e.argId() << endl; }
+
+// exit
+inputFile.close();
+return 0;
 }
