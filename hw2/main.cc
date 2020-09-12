@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
       optionMap[UPPER] = convertToString(uppercaseSwitch.getValue());
       optionMap[OUTFILE] = outfileArg.getValue();
       optionMap[INFILE] = infileArg.getValue();   
-
+      
     // Print error message and exit if both -u and -l commands are given
     if (optionMap[LOWER].compare("true") == 0 && optionMap[UPPER].compare("true") == 0)
     {
@@ -64,10 +64,9 @@ int main(int argc, char *argv[])
     
     // Open input file for reading
     ifstream inputFile;
-    inputFile.open(optionMap[INFILE].c_str(), ios::in);
+    inputFile.open(optionMap[INFILE].c_str());
     // Open outputFile for writing
-    ofstream outputFile;
-    outputFile.open(optionMap[OUTFILE].c_str(), ios::in);
+    ofstream outputFile(optionMap[OUTFILE].c_str());
     
     // char array to hold file input
     vector<char> inputArr;
