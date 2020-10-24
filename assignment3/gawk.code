@@ -1,0 +1,18 @@
+#! /home/010/g/gj/gjs160430/bin/gawk -f
+
+# Filename      gawk.code
+# Date          09/24/2020
+# Author        Garrett Strealy
+# Email         GJS160430@utdallas.edu
+# Course        CS 3377.001 Fall 2020
+# Version       1.0
+# Copyright     2020, All Rights Reserved
+
+# Description:
+# Parse a file that contains 6 columns of numbers.
+# Sum up column 1 and column 4 and return both
+# numbers on a single line (just 2 integers and nothing else).
+
+{ sum1 += $1 }
+{ sum4 += $4 } 
+END { print sum1, sum4 }
