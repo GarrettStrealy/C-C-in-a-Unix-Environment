@@ -1,0 +1,1 @@
+This project demonstrates my ability to perform binary file IO and to display the output in a bitmap display
