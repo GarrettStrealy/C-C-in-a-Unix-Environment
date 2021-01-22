@@ -1,0 +1,7 @@
+[Parameters]
+
+Verbose = true
+LogFile = cs3377dirmond.log
+Password = mypassword1
+NumVersions = 10
+WatchDir = /home/010/g/gj/gjs160430/testdir
